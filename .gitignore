@@ -1,0 +1,6 @@
+bin/
+obj/
+Program.cs
+advent2019.csproj
+*.txt
+*.deb
