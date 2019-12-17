@@ -1,29 +1,23 @@
-/* So, for each module mass, calculate its fuel and add it to the total. 
-Then, treat the fuel amount you just calculated as the input mass and repeat the process, 
-continuing until a fuel requirement is zero or negative. For example:
+/*Here are the initial and final states of a few more small programs:
 
-    A module of mass 14 requires 2 fuel. This fuel requires no further fuel 
-    (2 divided by 3 and rounded down is 0, which would call for a negative 
-    fuel), so the total fuel required is still just 2. At first, a module of
-    mass 1969 requires 654 fuel. Then, this fuel requires 216 more fuel 
-    (654 / 3 - 2). 216 then requires 70 more fuel, which requires 21 fuel, 
-    which requires 5 fuel, which requires no further fuel. So, the total fuel
-    required for a module of mass 1969 is 654 + 216 + 70 + 21 + 5 = 966. The
-    fuel required by a module of mass 100756 and its fuel is: 
-    33583 + 11192 + 3728 + 1240 + 411 + 135 + 43 + 12 + 2 = 50346.
+    1,0,0,0,99 becomes 2,0,0,0,99 (1 + 1 = 2).
+    2,3,0,3,99 becomes 2,3,0,6,99 (3 * 2 = 6).
+    2,4,4,5,99,0 becomes 2,4,4,5,99,9801 (99 * 99 = 9801).
+    1,1,1,4,99,5,6,0,99 becomes 30,1,1,4,2,5,6,0,99.
 
-What is the sum of the fuel requirements for all of the modules on your spacecraft
-when also taking into account the mass of the added fuel? (Calculate the fuel
-requirements for each module separately, then add them all up at the end.)*/
+Once you have a working computer, the first step is to restore the gravity 
+assist program (your puzzle input) to the "1202 program alarm" state it had 
+just before the last computer caught fire. To do this, before running the program,
+replace position 1 with the value 12 and replace position 2 with the value 2.
+What value is left at position 0 after the program halts? */
 
 using System;
-using static RocketEquation.SantasRocket;
 using System.Collections.Generic;
 
-namespace MassEnMass {
+namespace ProgramAlarm {
 
-    public class SantasMass {
-        public static int massSum(List<int> input) {
+    public class Intcode {
+        public static int restore1202() {
             //stub
             return 0;
         }
